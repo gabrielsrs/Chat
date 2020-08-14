@@ -1,4 +1,4 @@
-import mysql
+from mysql import Mysql
 
 
 def interface_options():
@@ -7,28 +7,28 @@ def interface_options():
     print(f"{'-' * 30}")
 
     while True:
-        if "1" not in option and "2" not in option:
+        if option != "1" and option != "2":
             print(f"Opção {option} não aceita. Tente novamente.")
             option = str(input("Escolha uma opção: "))
         else:
-            break
-
-    if option == "1":
-        return login()
-    else:
-        return register_user()
+            if option == "1":
+                return login()
+            else:
+                return register_user()
 
 
 def login():
     user = str(input("Email ou usuário: "))
     password = str(input("Senha: "))
-    response_enter = mysql.conf_login(user, password)
+    response_enter = Mysql(login=user, password=password)
+    response_enter.conf_login()
+
     return response_enter
 
 
 def register_user():
-    email = str(input("Digite seu email: "))
-    user = str(input("Digite seu usuário[opcional]: "))
+    email = str(input("Digite seu email: ")).strip()
+    user = str(input("Digite seu usuário: ")).strip()
     password = str(input("Digite sua senha: "))
 
     while True:
@@ -37,6 +37,7 @@ def register_user():
             password = str(input("Digite sua senha: "))
         else:
             break
-
-    response_register = mysql.register(email, user, password)
+    print(email, user)
+    response_register = Mysql(email=email, user=user, password=password)
+    response_register.register()
     return response_register

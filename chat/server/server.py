@@ -7,14 +7,14 @@ from person import Person
 # Global constants
 HOST = 'localhost'
 PORT = 5500
-ADOR = (HOST, PORT)
+ADDR = (HOST, PORT)
 MAX_CONNECTIONS = 10
 BUFSIZ = 512
 
 # Global variables
 persons_added = []
 SERVER = socket(AF_INET, SOCK_STREAM)
-SERVER.bind(ADOR)  # set up server
+SERVER.bind(ADDR)  # set up server
 
 
 def broadcast(msg, name):
@@ -41,27 +41,28 @@ def client_communication(person):
 
     # get persons name
     name = client.recv(BUFSIZ).decode("utf8")
+    person.set_name(name)
     msg = bytes(f"{name} has joined the chat!", "utf8")
     broadcast(msg, "")  # broadcast welcome message
 
     while True:
         try:
             msg = client.recv(BUFSIZ)
-            print(f"{name}: ", msg.decode('utf8'))
 
             if msg == bytes("{quit}", "utf8"):
-                broadcast(f"{name} has left the chat...", "")
-                client.send(bytes("{quit}", "utf8"))
                 client.close()
-
                 persons_added.remove(person)
+                broadcast(f"{name} has left the chat...", "")
+
+                print(f"[DISCONNECTED] {name} disconnected.")
                 break
 
             else:
                 broadcast(msg, name + ": ")
+                print(f"{name}: ", msg.decode('utf8'))
 
         except Exception as e:
-            print(f"[EXCEPTION] {e}")
+            print("[EXCEPTION]", e)
             break
 
 
@@ -81,7 +82,7 @@ def wait_for_connections():
             print(f"[CONNECTION] {addr} connected to the server at {time.time()}.")
             Thread(target=client_communication, args=(person,)).start()
         except Exception as e:
-            print(f"[EXCEPTION] {e}")
+            print("[EXCEPTION]", e)
             run = False
 
     print("Server crashed")
@@ -89,8 +90,8 @@ def wait_for_connections():
 
 if __name__ == "__main__":
     SERVER.listen(MAX_CONNECTIONS)  # List for MAX_CONNECTIONS accept
-    print("[STARTED] Waiting for connection...")
-    ACCEPT_THREAD = Thread(target=wait_for_connections, args=(SERVER,))
+    print("[STARTED] Waiting for connections...")
+    ACCEPT_THREAD = Thread(target=wait_for_connections)
     ACCEPT_THREAD.start()
     ACCEPT_THREAD.join()
     SERVER.close()

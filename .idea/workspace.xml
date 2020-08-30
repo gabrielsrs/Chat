@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13091972-ff51-4259-bdfb-7544eec07cd9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/client/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/client/client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/client/teste.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/client/teste.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/server/person.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/server/person.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/server/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/website/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/website/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -31,10 +34,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/chat/client/teste.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/chat/website/main.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -46,7 +50,7 @@
       <recent name="C:\Users\CLIENTE\PycharmProjects\testando\MySql" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.teste">
+  <component name="RunManager" selected="Python.web_server">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="login_mysql" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -72,6 +76,9 @@
       <module name="testando" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -170,6 +177,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="web_server" type="PythonConfigurationType" factoryName="Python">
+      <module name="testando" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\CLIENTE\AppData\Local\Programs\Python\Python38\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chat/website" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chat/website/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
       <module name="login_mysql" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -215,13 +243,16 @@
     </configuration>
     <list>
       <item itemvalue="Python.teste1" />
+      <item itemvalue="Python.web_server" />
+      <item itemvalue="Python.login" />
+      <item itemvalue="Python.mysql" />
       <item itemvalue="Python.server" />
       <item itemvalue="Python.teste" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.teste" />
         <item itemvalue="Python.server" />
+        <item itemvalue="Python.teste" />
         <item itemvalue="Python.teste" />
         <item itemvalue="Python.login" />
       </list>
@@ -246,10 +277,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1066" y="218" key="#Inspections/0.0.1920.1080@0.0.1920.1080" timestamp="1598157851407" />
-    <state x="828" y="174" width="1092" height="906" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598198968122">
+    <state x="828" y="150" width="1092" height="930" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598809916687">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="828" y="174" width="1092" height="906" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598198968122" />
+    <state x="828" y="150" width="1092" height="930" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598809916687" />
     <state x="1186" y="154" key="#login" timestamp="1598134742443">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -258,30 +289,30 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1186" y="154" key="#login_(1)/0.0.1920.1080@0.0.1920.1080" timestamp="1598135629242" />
-    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1598198986441">
+    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1598809908131">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1598198986441" />
+    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1598809908131" />
     <state x="1310" y="433" key="Github.ShareDialog" timestamp="1597102387659">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1310" y="433" key="Github.ShareDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1597102387659" />
-    <state width="937" height="339" key="GridCell.Tab.0.bottom" timestamp="1598224408742">
+    <state width="956" height="340" key="GridCell.Tab.0.bottom" timestamp="1598810721087">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="937" height="339" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1598224408742" />
-    <state width="937" height="339" key="GridCell.Tab.0.center" timestamp="1598224408742">
+    <state width="956" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1598810721087" />
+    <state width="956" height="340" key="GridCell.Tab.0.center" timestamp="1598810721087">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="937" height="339" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1598224408742" />
-    <state width="937" height="339" key="GridCell.Tab.0.left" timestamp="1598224408742">
+    <state width="956" height="340" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1598810721087" />
+    <state width="956" height="340" key="GridCell.Tab.0.left" timestamp="1598810721086">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="937" height="339" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1598224408742" />
-    <state width="937" height="339" key="GridCell.Tab.0.right" timestamp="1598224408742">
+    <state width="956" height="340" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1598810721086" />
+    <state width="956" height="340" key="GridCell.Tab.0.right" timestamp="1598810721087">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="937" height="339" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1598224408742" />
+    <state width="956" height="340" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1598810721087" />
     <state width="1899" height="354" key="GridCell.Tab.1.bottom" timestamp="1595636007827">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -302,10 +333,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="753" y="262" key="RollbackChangesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598134759304" />
-    <state x="720" y="226" key="SettingsEditor" timestamp="1598221496774">
+    <state x="720" y="226" key="SettingsEditor" timestamp="1598810125013">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="720" y="226" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1598221496774" />
+    <state x="720" y="226" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1598810125013" />
     <state x="92" y="92" width="1736" height="896" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1595290043832">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

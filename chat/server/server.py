@@ -39,25 +39,25 @@ def client_communication(person):
 
     client = person.client
 
-    # get persons name
+    # first message receive is always the person name
     name = client.recv(BUFSIZ).decode("utf8")
     person.set_name(name)
     msg = bytes(f"{name} has joined the chat!", "utf8")
     broadcast(msg, "")  # broadcast welcome message
 
-    while True:
+    while True:  # wait for messages from person
         try:
             msg = client.recv(BUFSIZ)
 
-            if msg == bytes("{quit}", "utf8"):
+            if msg == bytes("{quit}", "utf8"):  # if message is quit disconnect classe
                 client.close()
                 persons_added.remove(person)
-                broadcast(f"{name} has left the chat...", "")
+                broadcast(bytes(f"{name} has left the chat...", "utf8"), "")
 
                 print(f"[DISCONNECTED] {name} disconnected.")
                 break
 
-            else:
+            else:  # otherwise send message to all other clients
                 broadcast(msg, name + ": ")
                 print(f"{name}: ", msg.decode('utf8'))
 
@@ -72,24 +72,24 @@ def wait_for_connections():
     :param SERVER: socket
     :return: none
     """
-    run = True
-    while run:
+
+    while True:
         try:
-            client, addr = SERVER.accept()
-            person = Person(addr, client)
+            client, addr = SERVER.accept()  # wait for any new connections
+            person = Person(addr, client)  # creating new person for connection
             persons_added.append(person)
 
             print(f"[CONNECTION] {addr} connected to the server at {time.time()}.")
             Thread(target=client_communication, args=(person,)).start()
         except Exception as e:
             print("[EXCEPTION]", e)
-            run = False
+            break
 
     print("Server crashed")
 
 
 if __name__ == "__main__":
-    SERVER.listen(MAX_CONNECTIONS)  # List for MAX_CONNECTIONS accept
+    SERVER.listen(MAX_CONNECTIONS)  # open server to list for MAX_CONNECTIONS accept
     print("[STARTED] Waiting for connections...")
     ACCEPT_THREAD = Thread(target=wait_for_connections)
     ACCEPT_THREAD.start()

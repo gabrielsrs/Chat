@@ -1,18 +1,7 @@
-import pymysql
-import menu
-"""connect - conecta ao DB
-    connection - var que contem a conecção
-    cursor - var que contem a execução"""
-
-
 class Mysql:
-    connection = pymysql.connect(
-        host="localhost",
-        user="root",
-        password="",
-        db="cadastro",
-        charset="utf8mb4"
-    )
+    import pymysql
+
+    connection = pymysql.connect(host="localhost", user="root", password="", db="cadastro", charset="utf8mb4")
 
     def __init__(self, email="", user="", login="", password=""):
         self.email = email
@@ -56,6 +45,3 @@ class Mysql:
             else:
                 print("Erro de cadastro.\nTente novamente")
                 menu.register_user()
-
-
-
